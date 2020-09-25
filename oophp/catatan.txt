@@ -1,0 +1,169 @@
+----- Procedural Programming -----
+
+Karakteristik:
+
+- Instruksi dilakukan langkah demi langkah.
+- Memecah program menjadi bagian-bagian kecil.
+- Disebut procedure, subroutine, atau function.
+- Linear / Top-to-Bottom.
+- Fortran, ALGOL, COBOL, Pascal, C, PHP, Javascript.
+
+Kelebihan:
+
+- To-the-point.
+- Simplicity & kemudahan implementasi (untuk compiler & interpreter).
+- Mudah ditelusuri.
+- Membutuhkan lebih sedikit memory.
+
+----- Object Oriented Programming (OOP) -----
+
+Karakteristik:
+
+- Menyusun semua kode program dan stuktur data sebagai objek.
+- Objek adalah unit dasar dari program.
+- Objek menyimpan data dan perilaku.
+- Objek bisa saling berinteraksi.
+- Java, Ruby, Python, C++, Javascript, PHP5.
+
+Kelebihan:
+
+- Representasi dunia nyata.
+- Enkapsulasi & Abstraksi Data.
+- Reusability.
+- Skabilitas & Ekstensibilitas.
+- Kemudahan pengelolaan.
+- Kolaborasi.
+- Digunakan oleh framework.
+
+Basic:
+
+- Class & Object.
+- Property & Method.
+- Constructor.
+- Object Type.
+- Inheritance.
+- Visibility / Access Modifier.
+- Setter & Getter.
+- Static Method.
+
+Advanced:
+
+- Abstract & Interface.
+- Interceptor.
+- Object Cloning.
+- Callbacks & Closures.
+- Namespaces & Autoloading.
+- etc...
+
+>>> Class
+
+- Blueprint / template untuk membuat instance dari Object.
+- Class mendefinisikan Object.
+- Menyimpan data dan perilaku yang disebut dengan property dan method.
+- Diawali dengan menuliskan keyword class, diikuti nama dan dibatasi dengan {} untuk menyimpan property dan method.
+- Aturan penamaan Class sama seperti variable.
+
+>>> Object
+
+- Instance yang didefinisikan oleh Class.
+- Banyak Object dapat dibuat menggunakan satu Class.
+- Object dibuat dengan menggunakan keyword new.
+
+>>> Property
+
+- Merepresentasikan data / keadaan dari sebuah Object.
+- Variabel yang ada di dalam Object (member variable).
+- Sama seperti variable di dalam PHP, ditambah dengan visibility di depannya.
+
+>>> Method
+
+- Merepresentasikan perilaku dari sebuah Object.
+- Function yang ada di dalam Object.
+- Sama seperti function di dalam PHP, ditambah dengan visibility di depannya.
+
+Contoh kasusnya "Mobil", maka:
++ Property = nama, merk, warna, kecepatanMaksimal, jumlahPenumpang
++ Method = tambahKecepatan, kurangiKecepatan, gantiTransmisi, belokKiri, belokKanan
+
+>>> Inheritance
+
+- Menciptakan hierarki antar kelas (Parent & Child).
+- Child Class, mewarisi semua properti dan method dari parent-nya (yang visible).
+- Child Class, memperluas (extends) fungsionalitas dari parent-nya.
+
+>>> Visibility
+
++ Konsep yang digunakan untuk mengatur akses dari property dan method pada sebuah objek.
++ Ada 3 keyword:
+	- public, dapat digunakan di mana saja, bahkan di luar Class.
+	- protected, hanya dapat digunakan di dalam sebuah Class beserta turunannya.
+	- private, hanya dapat digunakan di dalam sebuah Class tertentu saja.
+
+Alasan perlu menerapkan:
+
+- Hanya memperlihatkan aspek dari Class yang dibutuhkan oleh client.
+- Menentukan kebutuhan yang jelas untuk Object.
+- Memberikan kendali pada kode untuk menghindari bug.
+
+>>> Static Keyword
+
+- Member yang terikat dengan Class, bukan dengan Object.
+- Nilai Static akan selalu tetap meskipun Object di-instansiasi berulang kali.
+- Membuat kode menjadi procedural.
+- Biasanya digunakan untuk membuat fungsi bantuan / helper, atau digunakan di class-class utility pada Framework.
+
+>>> Constant
+
+- Sebuah identifier untuk menyimpan nilai (tidak dapat berubah).
+- 2 cara: define() & const.
+
+>>> Abstract Class
+
+- Sebuah kelas yang tidak dapat di-instansiasi.
+- Kelas 'abstrak'.
+- Mendefinisikan interface untuk kelas lain yang menjadi turunannya.
+- Berperan sebagai 'kerangka dasar' untuk kelas turunannya.
+- Memiliki minimal 1 method abstrak.
+- Digunakan dalam 'Inheritance' untuk memaksakan implementasi method abstrak yang sama bagi semua kelas turunannya.
+- Semua kelas turunan, harus mengimplementasikan method abstrak yang ada di kelas abstraknya.
+- Kelas abstrak boleh memiliki property / method reguler.
+- Kelas abstrak boleh memiliki property / static method.
+
+Contoh:
+
+- class Mobil extends Kendaraan
+- class Laptop extends Komputer
+- class Email extends Komunikasi
+- etc...
+
+Alasan perlu menerapkan:
+
+- Merepresentasikan ide atau konsep dasar.
+- "Composition over Inheritance".
+- Salah satu cara menerapkan Polimorphism.
+- Sentralisasi Logic.
+- Mempermudah pengerjaan tim.
+
+>>> Interface
+
+- Kelas Abstrak yang sama sekali tidak memiliki implementasi.
+- Murni merupakan template untuk kelas turunannya.
+- Tidak boleh memiliki property, hanya deklarasi method saja.
+- Semua method harus dideklarasikan dengan visibility public.
+- Boleh mendeklarasikan __contruct().
+- Satu kelas boleh mengimplementasikan banyak interface.
+- Dengan menggunakan type-hinting dapat melakukan 'Dependency Injection'.
+- Pada akhirnya akan mencapai Polymorphism.
+
+>>> Autoloading
+
+- Memanggil class (file) tanpa harus menggunakan require.
+- 1 class ditulis dalam 1 file.
+
+>>> Namespace
+
+Sebuah cara untuk mengelompokkan program ke dalam sebuah package tersendiri (Encapsulation).
+
+Mengapa program harus dikelompokkan?
+
+PHP tidak mengijinkan untuk memiliki 2 class dengan nama yang sama.
